@@ -1,9 +1,9 @@
-#include  "BetaCipher.hpp"
+#include  "tableCipher.h"
 #include <string>
 
 using namespace std;
 
-std::wstring BetaCipher::encrypt(std::wstring& open_text)
+std::wstring tableCipher::encrypt(std::wstring& open_text)
 {
     wstring tabl = open_text;
     int dl, nstrok, index, x;
@@ -28,7 +28,7 @@ std::wstring BetaCipher::encrypt(std::wstring& open_text)
     return tabl;
 }
 
-std::wstring BetaCipher::decrypt(std::wstring& cipher_text)
+std::wstring tableCipher::decrypt(std::wstring& cipher_text)
 {
     wstring tabl = cipher_text;
     int dl, nstrok, index, x;
@@ -46,4 +46,3 @@ std::wstring BetaCipher::decrypt(std::wstring& cipher_text)
     }
     return tabl;
 }
-
