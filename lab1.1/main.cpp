@@ -1,4 +1,4 @@
-#include  "BetaCipher.hpp"
+#include  "tableCipher.h"
 using namespace std;
 std::wstring toValid(std::wstring& s)
 {
@@ -34,7 +34,7 @@ int main(int argc, char **argv)
             throw cipher_error("key not valid\n");
         }
 
-        BetaCipher cipher(key);
+        tableCipher cipher(key);
         do {
             wcout<<L"Cipher ready. Input operation (0-exit, 1-encrypt, 2-decrypt): ";
             wcin>>op;
